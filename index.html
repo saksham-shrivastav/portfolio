@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saksham's Portfolio</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            position: relative;
+            min-height: 100vh;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 1s;
+        }
+
+        .menu li a:hover {
+            color: #f43f5e;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: calc(100vh - 4rem);
+            padding: 2rem 0;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 1s;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            animation: slideIn 1s forwards;
+            opacity: 0;
+            animation-delay: 1.5s;
+        }
+
+        .hero-content .highlight {
+            color: #f43f5e;
+        }
+
+        .hero-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #9ca3af;
+            animation: slideIn 1s forwards;
+            opacity: 0;
+            animation-delay: 1.8s;
+        }
+
+        .hero-content .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #f43f5e;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 2s;
+        }
+
+        .hero-content .btn:hover {
+            background-color: #e11d48;
+        }
+
+        .hero-image {
+            flex-shrink: 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #f43f5e, #e11d48);
+            border-radius: 50%;
+            opacity: 0;
+            animation: scaleIn 1s forwards;
+            animation-delay: 1.5s;
+        }
+
+        .hero-image img {
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+            object-fit: cover;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">👨‍💻</a>
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="theme-toggle">🌗</button>
+            </nav>
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Hi, <br> I'm <span class="highlight">Saksham</span></h1>
+                    <h2>Android Developer</h2>
+                    <a href="contact.html" class="btn">Contact</a>
+                </div>
+                <div class="hero-image">
+                    <img src="profile.jpg" alt="Saksham's Photo">
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        let isDark = true;
+
+        themeToggle.addEventListener('click', () => {
+            isDark = !isDark;
+            document.body.style.backgroundColor = isDark ? '#121212' : '#ffffff';
+            document.body.style.color = isDark ? '#ffffff' : '#000000';
+            themeToggle.textContent = isDark ? '🌗' : '☀️';
+        });
+    </script>
+</body>
+</html>

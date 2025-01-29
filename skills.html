@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saksham's Portfolio</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+    
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.5;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Added smooth transition */
+        }
+    
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+    
+        /* Header */
+        .header {
+            position: relative;
+            min-height: 100vh;
+            background: #000;
+            overflow: hidden;
+        }
+    
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: -1;
+        }
+    
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+    
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+    
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+    
+        .menu li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+    
+        .menu li a:hover {
+            color: #f43f5e;
+        }
+    
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: calc(100vh - 4rem);
+            padding: 2rem 0;
+        }
+    
+        .hero-content {
+            max-width: 600px;
+        }
+    
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+    
+        .hero-content .highlight {
+            color: #f43f5e;
+        }
+    
+        .hero-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #9ca3af;
+        }
+    
+        .hero-content .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #f43f5e;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+    
+        .hero-content .btn:hover {
+            background-color: #e11d48;
+        }
+    
+        /* Profile Image on the Right */
+        .hero-image {
+            flex-shrink: 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #f43f5e, #e11d48);
+            border-radius: 50%;
+        }
+    
+        .hero-image img {
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+            object-fit: cover;
+        }
+    
+        /* Skills Section */
+        .skills {
+            padding: 4rem 0;
+            background-color: #1f1f1f;
+        }
+    
+        .skills h1 {
+            font-size: 2.5rem;
+            color: #f43f5e;
+            margin-bottom: 1rem;
+        }
+    
+        .skills .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+    
+        .skills .skill-item {
+            background-color: #333;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+    
+        .skills .skill-item:hover {
+            background-color: #f43f5e;
+        }
+    
+        .skills .skill-item h3 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+    
+        .skills .skill-item p {
+            color: #9ca3af;
+        }
+    </style>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">👨‍💻</a>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#skills"></a>Skils</li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="theme-toggle">🌗</button>
+            </nav>
+            <div class="hero">
+                <div class="hero-content">
+                    <section class="skills" id="skills">
+                        <div class="container">
+                            <h1>My Skills</h1>
+                            <div class="skill-list">
+                                <div class="skill-item">
+                                    <h3>HTML</h3>
+                                    <p>Building the structure of web pages</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h3>CSS</h3>
+                                    <p>Styling websites with responsive layouts</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h3>JavaScript</h3>
+                                    <p>Creating interactive and dynamic websites</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h3>React</h3>
+                                    <p>Building modern web applications with React</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h3>Node.js</h3>
+                                    <p>Server-side development with JavaScript</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h3>MongoDB</h3>
+                                    <p>A NoSQL for storing information</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h3>Git</h3>
+                                    <p>Version control for collaboration</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h3>Python</h3>
+                                    <p>An Object Oriented Programming Language with dynamic syntax</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h3>Java</h3>
+                                    <p>An Object Oriented Programming Language which is used to create various android apps as well as web applications</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h3>C++</h3>
+                                    <p>An Object Oriented Programming Language which is best used for competitive coding</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h3>MySQL</h3>
+                                    <p>A Relational Database Management System which stores data in form of rows and coloumns</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="hero-image">
+                    <img src="profile.jpg" alt="Profile Image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Skills Section 
+    <section class="skills" id="skills">
+        <div class="container">
+            <h1>My Skills</h1>
+            <div class="skill-list">
+                <div class="skill-item">
+                    <h3>HTML</h3>
+                    <p>Building the structure of web pages</p>
+                </div>
+                <div class="skill-item">
+                    <h3>CSS</h3>
+                    <p>Styling websites with responsive layouts</p>
+                </div>
+                <div class="skill-item">
+                    <h3>JavaScript</h3>
+                    <p>Creating interactive and dynamic websites</p>
+                </div>
+                <div class="skill-item">
+                    <h3>React</h3>
+                    <p>Building modern web applications with React</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Node.js</h3>
+                    <p>Server-side development with JavaScript</p>
+                </div>
+                <div class="skill-item">
+                    <h3>MongoDB</h3>
+                    <p>Version control for collaboration</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Git</h3>
+                    <p>Version control for collaboration</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Python</h3>
+                    <p>Version control for collaboration</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Java</h3>
+                    <p>Version control for collaboration</p>
+                </div>
+                <div class="skill-item">
+                    <h3>C++</h3>
+                    <p>Version control for collaboration</p>
+                </div>
+                <div class="skill-item">
+                    <h3>MySQL</h3>
+                    <p>Version control for collaboration</p>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        let isDark = true;
+
+        themeToggle.addEventListener('click', () => {
+            isDark = !isDark;
+            document.body.style.backgroundColor = isDark ? '#121212' : '#ffffff';
+            document.body.style.color = isDark ? '#ffffff' : '#000000';
+            themeToggle.textContent = isDark ? '🌗' : '☀️';
+        });
+    </script>
+</body>
+</html>

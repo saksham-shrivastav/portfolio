@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saksham's Portfolio</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            position: relative;
+            min-height: 100vh;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: -1;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+            animation-delay: 1s;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+            animation-delay: 1.2s;
+        }
+
+        .menu li a:hover {
+            color: #f43f5e;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: calc(100vh - 4rem);
+            padding: 2rem 0;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 2s;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 2.5s;
+        }
+
+        .hero-content .highlight {
+            color: #f43f5e;
+        }
+
+        .hero-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #9ca3af;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 2.8s;
+        }
+
+        .hero-content .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #f43f5e;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 3.1s;
+        }
+
+        .hero-content .btn:hover {
+            background-color: #e11d48;
+        }
+
+        .hero-image {
+            flex-shrink: 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #f43f5e, #e11d48);
+            border-radius: 50%;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 2.3s;
+        }
+
+        .hero-image img {
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">👨‍💻</a>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle">🌗</button>
+            </nav>
+            <div class="hero">
+                <div class="hero-content">
+                    <section class="about" id="about">
+                        <div class="text-content">
+                            <h1>About Me</h1>
+                            <h2>Hi, I'm Saksham, a Web Developer</h2>
+                            <p>
+                                I’m passionate about creating interactive and user-friendly websites. With a strong foundation in front-end technologies 
+                                such as HTML, CSS, and JavaScript, I specialize in building dynamic, responsive websites and web applications.
+                            </p>
+                            <p>
+                                I enjoy solving complex problems and bringing ideas to life through clean, maintainable code. My expertise extends to 
+                                frameworks like React, Vue.js, and tools like Node.js for back-end development.
+                            </p>
+                            <p>
+                                Outside of coding, I love exploring new technologies, contributing to open-source projects, and staying up to date 
+                                with the latest trends in web development. I’m always eager to learn and collaborate with others in the tech community
+                            </p><br>
+                            <a href="#projects" class="btn">Check Out My Projects</a>
+                        </div>
+                    </section>
+                </div>
+                <div class="hero-image">
+                    <!-- Replace 'profile.jpg' with your photo -->
+                    <img src="profile.jpg" alt="Saksham's Photo">
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        let isDark = true;
+
+        themeToggle.addEventListener('click', () => {
+            isDark = !isDark;
+            document.body.style.backgroundColor = isDark ? '#121212' : '#ffffff';
+            document.body.style.color = isDark ? '#ffffff' : '#000000';
+            themeToggle.textContent = isDark ? '🌗' : '☀️';
+        });
+    </script>
+</body>
+</html>
