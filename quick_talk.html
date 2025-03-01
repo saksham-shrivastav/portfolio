@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Snapshots</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #f43f5e;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .project-card {
+            background: #1e1e1e;
+            padding: 1rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #f43f5e;
+            color: #ffffff;
+            border-radius: 5px;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #e11d48;
+        }
+
+        .project-card img {
+            height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    height: auto; /* Remove the fixed height */
+}
+#icon {
+height: 40%;
+width: auto;
+
+}
+    </style>
+</head>
+<body>
+    <h1>Quick Talk</h1>
+    <div class="projects-grid">
+        <div class="project-card" id="icon">
+            <img src="quick_login.jpg" alt="Project 9">
+            <p class="project-title">Login</p>
+        </div>
+        <div class="project-card">
+            <img src="call.jpg" alt="Project 1">
+            <p class="project-title">Call Someone</p>
+        </div>
+        <div class="project-card">
+            <img src="video_call.jpg" alt="Project 2">
+            <p class="project-title">Video Call Initiated</p>
+        </div>
+        <div class="project-card">
+            <img src="vc_accept.jpg" alt="Project 3">
+            <p class="project-title">Video Call Accepted</p>
+        </div>
+        <div class="project-card">
+            <img src="voice.jpg" alt="Project 4">
+            <p class="project-title">Voice Call Initiated</p>
+        </div>
+        <div class="project-card">
+            <img src="voice_accept.jpg" alt="Project 5">
+            <p class="project-title">Voice Call Accepted</p>
+        </div>
+        
+    </div>
+    <a href="projects.html" class="back-button">Back to Projects</a>
+</body>
+</html>
